@@ -86,7 +86,7 @@ android {
 
 dependencies {
     implementation("androidx.annotation:annotation:1.10.0")
-    implementation("androidx.core:core:1.18.0")
+    implementation("androidx.core:core:1.19.0")
     implementation("androidx.drawerlayout:drawerlayout:1.2.0")
     implementation("androidx.viewpager:viewpager:1.1.0")
     implementation("com.google.android.material:material:1.14.0")

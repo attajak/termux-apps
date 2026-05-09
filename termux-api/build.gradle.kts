@@ -47,7 +47,7 @@ android {
 dependencies {
     implementation("com.google.android.material:material:1.13.0")
     implementation("androidx.biometric:biometric:1.2.0-alpha05")
-    implementation("androidx.media:media:1.7.1")
+    implementation("androidx.media:media:1.8.0")
 }
 
 tasks.register("versionName") {
