@@ -89,7 +89,7 @@ dependencies {
     implementation("androidx.core:core:1.18.0")
     implementation("androidx.drawerlayout:drawerlayout:1.2.0")
     implementation("androidx.viewpager:viewpager:1.1.0")
-    implementation("com.google.android.material:material:1.13.0")
+    implementation("com.google.android.material:material:1.14.0")
     implementation(project(":terminal-view"))
 
     testImplementation("junit:junit:4.13.2")
