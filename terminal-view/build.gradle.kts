@@ -5,14 +5,9 @@ plugins {
 android {
     namespace = "com.termux.view"
 
-    dependencies {
-        implementation("androidx.annotation:annotation:1.10.0")
-        api(project(":terminal-emulator"))
-    }
-
     defaultConfig {
-        val minSdkVersion: String by project
-        val compileSdkVersion: String by project
+        val minSdkVersion = project.property("minSdkVersion") as String
+        val compileSdkVersion = project.property("compileSdkVersion") as String
         minSdk = minSdkVersion.toInt()
         compileSdk = compileSdkVersion.toInt()
 
@@ -33,5 +28,8 @@ android {
 }
 
 dependencies {
+    implementation("androidx.annotation:annotation:1.10.0")
+    api(project(":terminal-emulator"))
+
     testImplementation("junit:junit:4.13.2")
 }

@@ -5,12 +5,12 @@ plugins {
 android {
     namespace = "com.termux.emulator"
 
-    val ndkVersion: String by project
+    val ndkVersion = project.property("ndkVersion") as String
     this.ndkVersion = ndkVersion
 
     defaultConfig {
-        val minSdkVersion: String by project
-        val compileSdkVersion: String by project
+        val minSdkVersion = project.property("minSdkVersion") as String
+        val compileSdkVersion = project.property("compileSdkVersion") as String
         minSdk = minSdkVersion.toInt()
         compileSdk = compileSdkVersion.toInt()
         ndk {

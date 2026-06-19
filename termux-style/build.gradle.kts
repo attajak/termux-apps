@@ -14,9 +14,9 @@ android {
         versionCode = 35
         versionName = "0.$versionCode"
 
-        val minSdkVersion: String by project
-        val targetSdkVersion: String by project
-        val compileSdkVersion: String by project
+        val minSdkVersion = project.property("minSdkVersion") as String
+        val targetSdkVersion = project.property("targetSdkVersion") as String
+        val compileSdkVersion = project.property("compileSdkVersion") as String
         minSdk = minSdkVersion.toInt()
         targetSdk = targetSdkVersion.toInt()
         compileSdk = compileSdkVersion.toInt()

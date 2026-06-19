@@ -5,7 +5,7 @@ buildscript {
     }
 
     dependencies {
-        val androidGradlePluginVersion: String by project
+        val androidGradlePluginVersion = project.property("androidGradlePluginVersion") as String
         classpath("com.android.tools.build:gradle:$androidGradlePluginVersion")
     }
 }

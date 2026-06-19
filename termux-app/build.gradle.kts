@@ -13,16 +13,16 @@ plugins {
 android {
     namespace = "com.termux"
 
-    val ndkVersion: String by project
+    val ndkVersion = project.property("ndkVersion") as String
     this.ndkVersion = ndkVersion
 
     defaultConfig {
         versionCode = 140
         versionName = "googleplay.2026.02.11"
 
-        val minSdkVersion: String by project
-        val targetSdkVersion: String by project
-        val compileSdkVersion: String by project
+        val minSdkVersion = project.property("minSdkVersion") as String
+        val targetSdkVersion = project.property("targetSdkVersion") as String
+        val compileSdkVersion = project.property("compileSdkVersion") as String
         minSdk = minSdkVersion.toInt()
         targetSdk = targetSdkVersion.toInt()
         compileSdk = compileSdkVersion.toInt()
