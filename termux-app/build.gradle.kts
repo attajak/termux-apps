@@ -167,11 +167,11 @@ tasks.register("downloadPrebuilt") {
     val projectDir = layout.projectDirectory
 
     doLast {
-        val bootstrapVersion = "2026.06.06-r1"
+        val bootstrapVersion = "2026.06.21-r2"
         val arches = mapOf(
-            "aarch64" to "796bb39b4cc40c3bd15803a5f9a37279415f3bad7856abe0767253856ac8e328",
-            "arm" to "dff93f0099b8d3c32bc92282590be0b3eaf7906a976a2c19d3948f31c8f8fd21",
-            "x86_64" to "552bae50991f853d54f02ce2e13d20c3d4468d08e51d93effe71f63eb4a912a2"
+            "aarch64" to "0aaa4b890c4de28c1da01c2a12bfbf342009faf626e6b504aed303e6a936bebe",
+            "arm" to "a0c3f9c0bb313ad5e371150a462bfe975c0108a444cf6f7f8c89173b9e9dc5f8",
+            "x86_64" to "1799aef733532fe29eb913968302d681a9d22b5c38654b980330ceb0e182aa64"
         )
         arches.forEach { (arch, checksum) ->
             val downloadTo = "src/main/cpp/bootstrap-${arch}.zip"
@@ -179,10 +179,10 @@ tasks.register("downloadPrebuilt") {
             downloadFile(projectDir, downloadTo, url, checksum)
         }
 
-        val prootTag = "proot-2026.01.22-r1"
-        val prootVersion = "5.1.107-70"
+        val prootTag = "proot-2026.06.21-r1"
+        val prootVersion = "5.1.107.80-0"
         var prootUrl = "https://github.com/termux-play-store/termux-packages/releases/download/${prootTag}/libproot-loader-ARCH-${prootVersion}.so"
-        downloadFile(projectDir, "src/main/jniLibs/armeabi-v7a/libproot-loader.so", prootUrl.replace("ARCH", "arm"), "09729047155df0c1a6b55c265ff4e272107775961d7efaff06bdd7cf37904050")
+        downloadFile(projectDir, "src/main/jniLibs/armeabi-v7a/libproot-loader.so", prootUrl.replace("ARCH", "arm"), "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855")
         downloadFile(projectDir, "src/main/jniLibs/arm64-v8a/libproot-loader.so", prootUrl.replace("ARCH", "aarch64"), "f7e3211e4c210c2a39a1f22b7f38666d99aee172fd009c0d19b84108cf20bb42")
         downloadFile(projectDir, "src/main/jniLibs/x86_64/libproot-loader.so", prootUrl.replace("ARCH", "x86_64"), "86e22d456255417e1d4ee874986571578ff26675ae2e372458e0d87f26454c63")
     }
