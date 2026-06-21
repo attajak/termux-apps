@@ -18,7 +18,7 @@ android {
 
     defaultConfig {
         versionCode = 140
-        versionName = "googleplay.2026.02.11"
+        versionName = "googleplay.2026.06.21"
 
         val minSdkVersion = project.property("minSdkVersion") as String
         val targetSdkVersion = project.property("targetSdkVersion") as String
