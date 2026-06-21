@@ -97,8 +97,9 @@ dependencies {
 }
 
 tasks.register("versionName") {
+    val versionName = android.defaultConfig.versionName
     doLast {
-        print(android.defaultConfig.versionName)
+        print(versionName)
     }
 }
 
